@@ -1,0 +1,46 @@
+{
+  "active": false,
+  "connections": {},
+  "createdAt": "2024-10-23T06:31:14.280Z",
+  "id": "dlXMXvZGd9kdgDox",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "My workflow 3",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "0745f0b3-d1f6-4db3-bd4b-8ecc620cb639",
+      "name": "When clicking ‘Test workflow’",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        360,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "# Loop over input items and add a new field called 'myNewField' to the JSON of each one\nfor item in _input.all():\n  item.json.myNewField = 1\nreturn _input.all()"
+      },
+      "id": "45359cb8-04f4-4382-9db5-9cde03988da9",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        740,
+        380
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2024-10-23T06:31:14.280Z",
+  "versionId": "df40ced9-dae0-451b-b698-28e4fddbdf28"
+}
